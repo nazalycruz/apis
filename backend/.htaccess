@@ -1,0 +1,18 @@
+#configuracion del servidor 
+
+#compartiendo enlace
+Options +FollowSymLinks
+
+#reescribiendo url
+RewriteEngine On
+
+#funcion a reedirigir a la url especifica
+#RewriteRule ExpresionRegular UrlDestino (banderas)
+#[a-zA-Z0-9] acepta caracteres y numeros, el * indica que es una combinacion de caracteres o numeros
+#configuracion del api 
+#variable=$1  obtiene el valor ingresado ya se que el usuario escriba dolar o euro y se guarda en "variable"
+
+RewriteRule ^([a-zA-Z0-9]*)$ datosapi.php?moneda=$1 
+
+
+  
